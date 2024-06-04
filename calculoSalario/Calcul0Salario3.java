@@ -35,10 +35,13 @@ public class Calcul0Salario3 {
                 aumento = 0;
             }
 
+
+
             double nuevoSalario = salarios[i] + (salarios[i] * aumento);
             System.out.println("El aumento es: $" + salarios[i] * aumento);
             System.out.println("El nuevo salario del empleado es: $" + nuevoSalario);
             aumentoTotal += salarios[i] * aumento;
+
         }
         System.out.println("El aumento total de todos los empleados = $" + aumentoTotal);
     }
