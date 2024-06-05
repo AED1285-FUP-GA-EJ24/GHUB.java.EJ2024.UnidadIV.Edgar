@@ -9,6 +9,7 @@ import generacionNombres.*;
 import arreglosMultidimensionales.ArreglosMultidimensionales;
 import leerAccederArreglo.*;
 import calculoSalario.*;
+import ejercicioExamen.*;
 import java.util.Scanner;
 
 public class Principal {
@@ -32,6 +33,7 @@ public class Principal {
             System.out.println("*10) Calculo salario para varios trabajadores v1");
             System.out.println("*11) Calculo salario para varios trabajadores v2");
             System.out.println("*12) Calculo salario para varios trabajadores v3");
+             System.out.println("*13) Ejercicio Examen(arreglo UNIDIMENSIONAL)");
             System.out.println();
             System.out.println("* 99) Salir"); 
             System.out.println("**************************************");
@@ -90,6 +92,10 @@ public class Principal {
                    break;
                 case 12:
                    Calcul0Salario3.calcular();
+                   break;
+               case 13:
+                   EjercicioExamen objEjercicioExamen = new EjercicioExamen();
+                   objEjercicioExamen.leerDatos();
                    break;
                 case 99:
                     System.out.println("Hasta luego");
