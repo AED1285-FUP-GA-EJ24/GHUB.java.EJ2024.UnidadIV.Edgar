@@ -1,4 +1,5 @@
 package calculoSalario;
+
 import java.util.Scanner;
 
 public class Calcul0Salario3 {
@@ -8,6 +9,9 @@ public class Calcul0Salario3 {
         int cantidadEmpleados = 5; // Puedes cambiar la cantidad de empleados según tus necesidades
         double[] salarios = new double[cantidadEmpleados];
         double aumentoTotal = 0;
+
+        System.out.println("Empleado    Saldo Actual    Bono    Nuevo Salario");
+        System.out.println("------------------------------------------------");
 
         for (int i = 0; i < cantidadEmpleados; i++) {
             System.out.println("Ingreso datos del empleado " + (i + 1) + " (-9 para terminar):");
@@ -35,14 +39,17 @@ public class Calcul0Salario3 {
                 aumento = 0;
             }
 
+            double bono = salarios[i] * aumento;
+            double nuevoSalario = salarios[i] + bono;
+            aumentoTotal += bono;
 
-
-            double nuevoSalario = salarios[i] + (salarios[i] * aumento);
-            System.out.println("El aumento es: $" + salarios[i] * aumento);
-            System.out.println("El nuevo salario del empleado es: $" + nuevoSalario);
-            aumentoTotal += salarios[i] * aumento;
-
+            System.out.printf("%-12d $%-14.2f $%-7.2f $%-13.2f%n", (i + 1), salarios[i], bono, nuevoSalario);
         }
+        System.out.println("------------------------------------------------");
         System.out.println("El aumento total de todos los empleados = $" + aumentoTotal);
+    }
+
+    public static void main(String[] args) {
+        calcular();
     }
 }
